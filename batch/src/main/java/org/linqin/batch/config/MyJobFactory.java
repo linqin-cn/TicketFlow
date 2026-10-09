@@ -5,6 +5,9 @@ import org.quartz.spi.TriggerFiredBundle;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.scheduling.quartz.SpringBeanJobFactory;
 
+/**
+ * 自定义Job工厂, 使得Job实例可以使用Spring的依赖注入
+ */
 public class MyJobFactory extends SpringBeanJobFactory {
     @Resource
     private AutowireCapableBeanFactory beanFactory;
